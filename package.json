@@ -1,0 +1,17 @@
+{
+  "name": "bem-classnames",
+  "version": "0.0.1",
+  "description": "Helper utility for generating bem-style classnames",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Mike Palmer",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "jest": "^23.4.1",
+    "prettier": "^1.13.7"
+  }
+}
