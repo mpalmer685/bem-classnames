@@ -1,5 +1,5 @@
 {
-  "name": "bem-classnames",
+  "name": "@mrpalmer/bem-classnames",
   "version": "0.0.1",
   "description": "Helper utility for generating bem-style classnames",
   "main": "index.js",
