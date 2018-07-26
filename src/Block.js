@@ -1,13 +1,12 @@
-const BlockElement = require('./BlockElement')
-const Mixes = require('./Mixes')
-const Modifiers = require('./Modifiers')
+import BlockElement from './BlockElement'
+import Mixes from './Mixes'
+import Modifiers from './Modifiers'
 
 const Block = (name, modifiers = Modifiers(), mixes = Mixes()) => ({
     name: () => {
         const classes = [name]
-
-        Array.prototype.push.apply(classes, modifiers.format(name))
-        Array.prototype.push.apply(classes, mixes.format())
+        classes.push(...modifiers.format(name))
+        classes.push(...mixes.format())
 
         return classes.join(' ')
     },
@@ -19,4 +18,4 @@ const Block = (name, modifiers = Modifiers(), mixes = Mixes()) => ({
     element: elementName => BlockElement(name, elementName)
 })
 
-module.exports = Block
+export default Block

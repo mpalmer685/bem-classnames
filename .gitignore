@@ -91,3 +91,8 @@ out/
 
 # JIRA plugin
 atlassian-ide-plugin.xml
+
+### Project files
+
+# Build output
+dist/

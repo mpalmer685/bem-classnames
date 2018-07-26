@@ -1,6 +1,6 @@
-const Mixes = require('./Mixes')
-const Modifiers = require('./Modifiers')
-const { options } = require('./config')
+import Mixes from './Mixes'
+import Modifiers from './Modifiers'
+import { options } from './config'
 
 const BlockElement = (
     blockName,
@@ -11,8 +11,8 @@ const BlockElement = (
     name() {
         const elementClassName = formatElementClass(blockName, elementName)
         const classes = [elementClassName]
-        Array.prototype.push.apply(classes, modifiers.format(elementClassName))
-        Array.prototype.push.apply(classes, mixes.format())
+        classes.push(...modifiers.format(elementClassName))
+        classes.push(...mixes.format())
 
         return classes.join(' ')
     },
@@ -27,4 +27,4 @@ function formatElementClass(blockName, elementName) {
     return [blockName, options.blockElementSeparator, elementName].join('')
 }
 
-module.exports = BlockElement
+export default BlockElement

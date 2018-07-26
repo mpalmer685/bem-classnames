@@ -4,14 +4,21 @@
   "description": "Helper utility for generating bem-style classnames",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "prebuild": "rimraf dist",
+    "build": "babel --out-dir dist src",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watchAll"
   },
   "author": "Mike Palmer",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
     "jest": "^23.4.1",
-    "prettier": "^1.13.7"
+    "prettier": "^1.13.7",
+    "rimraf": "^2.6.2"
   }
 }

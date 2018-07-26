@@ -1,5 +1,5 @@
-const Block = require('./Block')
-const { modifyConfig } = require('./config')
+import Block from './Block'
+import { modifyConfig } from './config'
 
 function createBlock(blockName) {
     return Block(blockName)
@@ -7,4 +7,4 @@ function createBlock(blockName) {
 
 createBlock.config = modifyConfig
 
-module.exports = createBlock
+export default createBlock

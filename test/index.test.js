@@ -1,4 +1,4 @@
-const createBlock = require('../src')
+import createBlock from '../src'
 
 describe('block', () => {
     const button = createBlock('button')

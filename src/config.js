@@ -10,7 +10,4 @@ function modifyConfig(customConfig) {
     Object.assign(options, customConfig)
 }
 
-module.exports = {
-    options,
-    modifyConfig
-}
+export { options, modifyConfig }

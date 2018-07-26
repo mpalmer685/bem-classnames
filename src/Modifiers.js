@@ -1,4 +1,4 @@
-const { options } = require('./config')
+import { options } from './config'
 
 const Modifiers = (modifiers = {}) => ({
     add(newModifiers) {
@@ -39,4 +39,4 @@ function formatModifier(baseName, name, value) {
     return modifierComponents.join('')
 }
 
-module.exports = Modifiers
+export default Modifiers

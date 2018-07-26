@@ -4,4 +4,4 @@ const Mixes = (mixes = []) => ({
     format: () => mixes
 })
 
-module.exports = Mixes
+export default Mixes
