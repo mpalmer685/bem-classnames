@@ -6,7 +6,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "babel --out-dir dist src",
-    "lint": "eslint .",
+    "lint": "eslint --ignore-pattern \"dist/\" .",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watchAll",
